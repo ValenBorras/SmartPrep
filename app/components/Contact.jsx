@@ -28,10 +28,12 @@ export default function ContactSection() {
         {/* Formulario */}
         {!sent && (
           <form
-            action="https://formspree.io/f/mqapopeb"  //endpoint 
+            action="https://formspree.io/f/mqapopeb"
             method="POST"
-            onSubmit={() => setSent(true)}
             className="space-y-6 text-left font-inter"
+            onSubmit={() => {
+              setTimeout(() => setSent(true), 100) // da tiempo al form para enviarse
+            }}
           >
             <div className="flex flex-col md:flex-row gap-6">
               <div className="w-full">
