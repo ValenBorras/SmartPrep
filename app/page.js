@@ -7,6 +7,7 @@ import AboutUs from './components/AboutUs'
 import ClientsSection from './components/ClientsSection'
 import Contact from './components/Contact'
 import { FaWhatsapp } from 'react-icons/fa'
+import { Analytics } from "@vercel/analytics/react"
 // import WhyUsSection from '../components/WhyUsSection'
 // import ContactSection from '../components/ContactSection'
 // import Footer from '../components/Footer'
@@ -33,6 +34,7 @@ export default function Home() {
         aria-label="WhatsApp Contact"
       >
         <FaWhatsapp className="text-2xl" />
+        <Analytics/>
       </a>
     </main>
   )
