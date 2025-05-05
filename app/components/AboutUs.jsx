@@ -29,7 +29,7 @@ export default function AboutUsSection() {
 
         {/* Imagen o mockup opcional */}
         <motion.img
-          src="/team.webp"
+          src="/GroupGH.webp"
           alt="SmartPrep team"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
