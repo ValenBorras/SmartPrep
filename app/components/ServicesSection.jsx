@@ -5,12 +5,12 @@ const services = [
   {
     title: 'Product Receiving & Inspection',
     description: 'We receive your inventory, inspect for accuracy and damage, and get it ready for fulfillment with care and precision.',
-    image: '/receiving.webp',
+    image: '/NjCroceMerch.jpeg',
   },
   {
     title: 'Labeling & Compliance',
     description: 'FNSKU, bundles, custom branding — we handle all Amazon & e-commerce labeling needs so your shipments are always compliant.',
-    image: '/labeling.webp',
+    image: '/labelingMonopoly.jpeg',
   },
   {
     title: 'Prep for Amazon, Walmart & More',
@@ -20,7 +20,7 @@ const services = [
   {
     title: 'Storage & Inventory Management',
     description: 'Keep your products safe and organized with scalable, trackable storage space in our Miami facility.',
-    image: '/warehouse.webp',
+    image: '/WhseVertical.jpeg',
   },
 
 ]

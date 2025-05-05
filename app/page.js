@@ -8,6 +8,7 @@ import ClientsSection from './components/ClientsSection'
 import Contact from './components/Contact'
 import { FaWhatsapp } from 'react-icons/fa'
 import { Analytics } from "@vercel/analytics/react"
+import Script from 'next/script'
 // import WhyUsSection from '../components/WhyUsSection'
 // import ContactSection from '../components/ContactSection'
 // import Footer from '../components/Footer'
@@ -15,6 +16,23 @@ import { Analytics } from "@vercel/analytics/react"
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-white text-[#121212] font-inter">
+
+      {/* Google Ads Global Site Tag */}
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17029799100"
+      />
+      <Script
+        id="google-ads"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17029799100');
+        `}
+      </Script>
       
       <HeroSection />
       <div id="navbar-wrapper">
