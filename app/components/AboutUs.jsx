@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function AboutUsSection() {
   return (
@@ -28,15 +29,31 @@ export default function AboutUsSection() {
         </motion.p>
 
         {/* Imagen o mockup opcional */}
-        <motion.img
-          src="/GroupGH.webp"
-          alt="SmartPrep team"
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
+{/* Team Image Section */}
+<motion.div 
+          className="mt-20 mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-lg shadow-lg mx-auto mt-10 w-full max-w-4xl object-cover"
-        />
+          transition={{ delay: 0.2 }}
+        >
+          <div className="relative w-full max-w-4xl mx-auto aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border-2 border-[#ef3e00]/20 hover:border-[#ef3e00]/40 transition-all duration-300">
+            <Image
+              src="/GroupGH.JPEG"
+              alt="The Geekshive Team"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-700"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+              priority
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#ef3e00] mb-2">Meet The Team</h3>
+              <p className="text-white/90 text-lg">The passionate minds behind SmartPrep</p>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </section>
   )
